@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Website</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Header Section -->
     <header>
-        <h1>Welcome to My Website</h1>
         <nav>
             <ul>
                 <li><a href="#main-content">Home</a></li>
@@ -17,6 +16,9 @@
                 <li><a href="#footer">Contact</a></li>
             </ul>
         </nav>
+        <div class="hero">
+            <h1>Welcome to My Website</h1>
+        </div>
     </header>
 
     <!-- Main Content Section -->
@@ -26,11 +28,13 @@
         <img src="https://via.placeholder.com/400" alt="Placeholder Image">
 
         <!-- Form Section -->
-        <form id="contactForm">
+        <form id="contactForm" action="submit.php" method="post">
             <label for="name">Your Name:</label>
-            <input type="text" id="name" required>
+            <input type="text" id="name" name="name" required>
+
             <label for="email">Your Email:</label>
-            <input type="email" id="email" required>
+            <input type="email" id="email" name="email" required>
+
             <button type="submit">Submit</button>
         </form>
         <p id="message"></p>
@@ -49,9 +53,7 @@
 
     <!-- Footer Section -->
     <footer id="footer">
-        <p>&copy; 2024 My Website | Contact us at info@example.com</p>
+        <p>&copy; 2024 My Website | Contact us at <a href="mailto:info@example.com">info@example.com</a></p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
