@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header Section -->
+    <!-- Header Section (Only Navigation) -->
     <header>
         <nav>
             <ul>
@@ -16,29 +16,40 @@
                 <li><a href="#footer">Contact</a></li>
             </ul>
         </nav>
-        <div class="hero">
-            <h1>Welcome to My Website</h1>
-        </div>
     </header>
+
+    <!-- Hero Section (Now Separate) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to My Website</h1>
+            <p>Discover amazing content and learn more about what we do.</p>
+            <a href="#main-content" class="btn">Get Started</a>
+        </div>
+    </section>
 
     <!-- Main Content Section -->
     <main id="main-content">
         <h2>Main Content Area</h2>
         <p>This is the main content section where important information is displayed.</p>
-        <img src="https://via.placeholder.com/400" alt="Placeholder Image">
+        <img src="./banner-png.webp" alt="Placeholder Image">
 
-        <!-- Form Section -->
-        <form id="contactForm" action="submit.php" method="post">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <button type="submit">Submit</button>
-        </form>
-        <p id="message"></p>
     </main>
+    <!-- Form Section -->
+    <form id="contactForm" action="submit.php" method="post">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mobile">Your Mobile:</label>
+        <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required placeholder="Enter 10-digit mobile number">
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="4" required placeholder="Enter your message here..."></textarea>
+        <br>
+        <button type="submit">Submit</button>
+</form>
 
     <!-- Sidebar Section -->
     <aside id="sidebar">
